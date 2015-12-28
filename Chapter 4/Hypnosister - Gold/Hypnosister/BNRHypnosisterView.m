@@ -70,7 +70,7 @@
     [trianglePath moveToPoint:topOfTriangle];
     [trianglePath addLineToPoint:bottomRightOfTriangle];
     [trianglePath addLineToPoint:bottomLeftOfTriangle];
-    [trianglePath addLineToPoint:topOfTriangle];
+    [trianglePath closePath];
     
     [trianglePath addClip];
     
