@@ -20,13 +20,12 @@
     // Override point for customization after application launch.
     
 //    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
-    CGRect firstFrame = self.window.bounds;
-    
-    BNRHypnosisterView *firstView = [[BNRHypnosisterView alloc] initWithFrame:firstFrame];
+//    CGRect firstFrame = self.window.bounds;
+//    
+//    BNRHypnosisterView *firstView = [[BNRHypnosisterView alloc] initWithFrame:firstFrame];
 //    firstView.backgroundColor = [UIColor redColor];
-    
-    // This is important to make it work for the next chapter
-    [viewController.view addSubview:firstView];
+//
+//    [viewController.view addSubview:firstView];
     
 //    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
 //    BNRHypnosisterView *secondView = [[BNRHypnosisterView alloc] initWithFrame:secondFrame];
@@ -34,6 +33,25 @@
     
 //    [self.window addSubview:secondView];
 //    [firstView addSubview:secondView];
+    
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+//    bigRect.size.height *= 2.0;
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [viewController.view addSubview:scrollView];
+    scrollView.pagingEnabled = YES;
+    
+//    BNRHypnosisterView *hypnosisView = [[BNRHypnosisterView alloc] initWithFrame:bigRect];
+    BNRHypnosisterView *hypnosisView = [[BNRHypnosisterView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    screenRect.origin.x += screenRect.size.width;
+    BNRHypnosisterView *anotherView = [[BNRHypnosisterView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    scrollView.contentSize = bigRect.size;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
