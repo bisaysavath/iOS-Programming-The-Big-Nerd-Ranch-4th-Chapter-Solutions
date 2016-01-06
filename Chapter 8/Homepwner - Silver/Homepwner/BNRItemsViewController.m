@@ -97,10 +97,6 @@
         cell.textLabel.text = [item description];
     }
     
-    
-    
-    
-    
     return cell;
 }
 
