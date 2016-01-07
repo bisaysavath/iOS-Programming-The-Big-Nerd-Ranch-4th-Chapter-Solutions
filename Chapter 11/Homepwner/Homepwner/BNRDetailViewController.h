@@ -2,7 +2,7 @@
 
 @class BNRItem;
 
-@interface BNRDatePickerViewController : UIViewController
+@interface BNRDetailViewController : UIViewController
 
 @property (nonatomic, strong) BNRItem *item;
 
