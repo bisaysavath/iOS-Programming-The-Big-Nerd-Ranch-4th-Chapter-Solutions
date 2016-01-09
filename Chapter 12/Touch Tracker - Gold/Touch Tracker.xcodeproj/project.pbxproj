@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BB29E491C3F8F4300FB6F69 /* BNRCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB29E481C3F8F4300FB6F69 /* BNRCircle.m */; };
 		3BD550791C3F5EDE0090E4F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD550781C3F5EDE0090E4F4 /* main.m */; };
 		3BD5507C1C3F5EDE0090E4F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5507B1C3F5EDE0090E4F4 /* AppDelegate.m */; };
 		3BD550841C3F5EDE0090E4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD550831C3F5EDE0090E4F4 /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BB29E471C3F8F4300FB6F69 /* BNRCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRCircle.h; sourceTree = "<group>"; };
+		3BB29E481C3F8F4300FB6F69 /* BNRCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRCircle.m; sourceTree = "<group>"; };
 		3BD550741C3F5EDE0090E4F4 /* Touch Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Touch Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD550781C3F5EDE0090E4F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD5507A1C3F5EDE0090E4F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				3BD5508F1C3F5F3F0090E4F4 /* BNRLine.m */,
 				3BD550911C3F5FC30090E4F4 /* BNRDrawView.h */,
 				3BD550921C3F5FC30090E4F4 /* BNRDrawView.m */,
+				3BB29E471C3F8F4300FB6F69 /* BNRCircle.h */,
+				3BB29E481C3F8F4300FB6F69 /* BNRCircle.m */,
 				3BD550941C3F60080090E4F4 /* BNRDrawViewController.h */,
 				3BD550951C3F60080090E4F4 /* BNRDrawViewController.m */,
 				3BD550831C3F5EDE0090E4F4 /* Assets.xcassets */,
@@ -157,6 +162,7 @@
 			files = (
 				3BD5507C1C3F5EDE0090E4F4 /* AppDelegate.m in Sources */,
 				3BD550961C3F60080090E4F4 /* BNRDrawViewController.m in Sources */,
+				3BB29E491C3F8F4300FB6F69 /* BNRCircle.m in Sources */,
 				3BD550901C3F5F3F0090E4F4 /* BNRLine.m in Sources */,
 				3BD550791C3F5EDE0090E4F4 /* main.m in Sources */,
 				3BD550931C3F5FC30090E4F4 /* BNRDrawView.m in Sources */,
@@ -298,6 +304,7 @@
 				3BD5508D1C3F5EDE0090E4F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

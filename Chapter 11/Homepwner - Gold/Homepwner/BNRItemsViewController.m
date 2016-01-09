@@ -11,6 +11,7 @@
 
 @implementation BNRItemsViewController
 
+#pragma mark - Controller life cycle
 - (instancetype)init
 {
     self = [super initWithStyle:UITableViewStylePlain];
@@ -34,6 +35,7 @@
     return [self init];
 }
 
+#pragma mark - View life cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,6 +46,13 @@
 //    [self.tableView setTableHeaderView:header];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+#pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[[BNRItemStore sharedStore] allItem] count];
@@ -87,6 +96,7 @@
     [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
+#pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
@@ -97,12 +107,7 @@
     detailViewController.item = selectedItem;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
-}
-
+#pragma mark - Actions
 - (IBAction)addNewItem:(id)sender
 {
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];

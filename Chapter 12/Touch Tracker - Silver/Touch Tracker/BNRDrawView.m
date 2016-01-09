@@ -41,9 +41,9 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    [[UIColor blackColor] set];
-    
     for (BNRLine *line in self.finishedLines) {
+        // Set the color everytime each line needs to be drawn
+        [line.color set];
         [self strokeLine:line];
     }
 
@@ -112,6 +112,16 @@
         NSValue *key = [NSValue valueWithNonretainedObject:t];
         
         BNRLine *line = self.linesInProgress[key];
+        
+        
+        // Gold Challenge
+        // Figure out the angle (Using Trigonometry)
+        float x = fabsf(line.end.x - line.begin.x);
+        float y = fabsf(line.end.y - line.begin.y);
+        
+        float angle = fabsf(tanf(y / x));
+        
+        line.color = [UIColor colorWithHue:angle saturation:1.0 brightness:1.0 alpha:1.0];
         
         [self.finishedLines addObject:line];
         
